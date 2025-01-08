@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>invoice</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Letter pad background styling */
+        .background-letterpad {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.2; /* Makes the background faint */
+            object-fit: cover; /* Ensures the image covers the entire page */
+        }
+
+        /* Content styling to overlay on the background */
+        /* body.content {
+            position: relative;
+        } */
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .content {
+            position: relative;
+            z-index: 3;
+            padding: 20px;
+        }
+
+        .full-body-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: url('latterpad.jpg') no-repeat center center/cover;
+        }
+
+        #header {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body class="content border">
+    <section class="sec1" id="header" style="display: flex; justify-content: space-between;">
+        <!-- <div>
+            <img src="logo.webp" alt="logo" width="150px">
+        </div> -->
+        <div>
+            <div class="name">PRISHA SOFTWARE PRIVATE LIMITED</div>
+            <div class="add"><span class="bold">Address</span> :4th 406/A,Shivalay Complex,Mavdi Main
+                Road,Rajkot-360004.
+            </div>
+            <div class="phone">
+                <div><span class="bold">Phone</span> :+91 9662779868</div>
+                <div><span class="bold">Email</span> : info@accountdigi.com</div>
+            </div>
+        </div>
+    </section>
+    <!-- <section>
+        <img src="latterpad img.png" alt="" height="60px" width="100%">
+    </section> -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const body = document.body;
+            const header = document.getElementById("header");
+            const isLetterPad = true; // Set true if using a letter pad
+            const hasLogo = false; // Set true if the logo should be displayed when no letter pad is used
+
+            if (isLetterPad) {
+                // Add the letter pad image as the background for the entire page
+                const letterPadImg = document.createElement("img");
+                letterPadImg.src = "latterpad.jpg"; // Add your letter pad image path
+                letterPadImg.alt = "Letter Pad";
+                letterPadImg.classList.add("background-letterpad");
+                body.appendChild(letterPadImg);
+
+                // Hide the header content
+                header.style.display = "none";
+            } else {
+                // Show logo and content if no letter pad is used
+                if (hasLogo) {
+                    const logo = document.createElement("img");
+                    logo.src = "logo.webp"; // Add your logo path
+                    logo.alt = "Logo";
+                    logo.width = 150;
+                    logo.classList.add("logo");
+                    header.appendChild(logo);
+                }
+
+                const content = document.createElement("div");
+                content.classList.add("header-content");
+                header.appendChild(content);
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => { 
+            const isLetterPad = true; // Set to true if the letter pad background is required
+
+            if (isLetterPad) {
+                // Add a background image for the letter pad
+                const letterPadImg = document.createElement("img");
+                letterPadImg.src = "latterpad.jpg"; // Replace with the path to your letter pad image
+                letterPadImg.alt = "Letter Pad";
+                letterPadImg.classList.add("background-letterpad");
+                document.body.appendChild(letterPadImg);
+
+                // Hide the header
+                const header = document.getElementById("header");
+                header.style.display = "none";
+            }
+        });
+    </script>
+
+    <section class="sec2">
+        <hr style="color: rgb(2, 110, 199);">
+        <div class="gst bold">
+            <div>GSTIN :24AANCP5768N1ZK</div>
+            <div style="color: rgb(89, 154, 235);">TAX INVOICE</div>
+            <div>ORIGINAL FOR RECIPIENT</div>
+        </div>
+        <hr>
+        <div class="customer">
+            <div class="detail1">
+                <div style="text-align: center;">Customer Detail</div>
+                <hr>
+                <div class="info" style=" gap: 70px;">
+                    <h5>M/S</h5>
+                    <div>SAINATH SOLUTION</div>
+                </div>
+                <div class="info" style=" gap: 30px;">
+                    <h5>ADDRESS</h5>
+                    <div style="text-transform: capitalize;">subh mangal apartment flat number.304 behind Puja
+                        Deluxe,Khalilpur Road Junagadh-362002.</div>
+                </div>
+                <div class="info" style=" gap: 40px;">
+                    <h5>PHONE</h5>
+                    <div>-</div>
+                </div>
+                <div class="info" style=" gap: 50px;">
+                    <h5>GSTIN</h5>
+                    <div>24APUPC3680F1ZU</div>
+                </div>
+                <div class="info" style="gap: 60px;">
+                    <h5>PAN</h5>
+                    <div>APUPC3680F</div>
+                </div>
+                <div class="info" style="gap: 50px;">
+                    <h5>STATE</h5>
+                    <div>Gujarat( 24 )</div>
+                </div>
+            </div>
+            <hr>
+            <div class="detail2">
+                <div class="info" style="gap: 60px;">Invoice No.: <p>22</p>
+                </div>
+                <div class="info" style="gap: 50px;">Invoice Date: <p>04-12-2024</p>
+                </div>
+                <div>Transport:</div>
+                <div>L.R.No.:</div>
+                <div>Vehical No.:</div>
+                <div class="info" style="gap: 30px;">Place Of Supply: <p>Gujarat( 24 )</p>
+                </div>
+                <div>EwayBill No.:</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section3 -->
+    <section class="table-con">
+        <table class="invoice-table">
+            <thead>
+                <tr class="skycolor">
+                    <th>No</th>
+                    <th>Description of Goods</th>
+                    <th>HSN/SAC</th>
+                    <th>Pack/Unit</th>
+                    <th>Qty</th>
+                    <th>Rate</th>
+                    <th class="skycolor">Taxable Amount</th>
+                    <th colspan="2">GST</th>
+                    <th class="skycolor">Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>SOFTWARE SAINATH ENTERPRISE +4 IDS NEW</td>
+                    <td>998319</td>
+                    <td>1 UNIT</td>
+                    <td>1</td>
+                    <td>15,000.00</td>
+                    <td class="skycolor">15,000.00</td>
+                    <td>18%</td>
+                    <td>2,700</td>
+                    <td class="skycolor">17,700.00</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>SOFTWARE SAINATH ENTERPRISE +4 IDS NEW</td>
+                    <td>998319</td>
+                    <td>1 UNIT</td>
+                    <td>1</td>
+                    <td>15,000.00</td>
+                    <td class="skycolor">15,000.00</td>
+                    <td>18%</td>
+                    <td>2,700</td>
+                    <td class="skycolor">17,700.00</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>SOFTWARE SAINATH ENTERPRISE +4 IDS NEW</td>
+                    <td>998319</td>
+                    <td>1 UNIT</td>
+                    <td>1</td>
+                    <td>15,000.00</td>
+                    <td class="skycolor">15,000.00</td>
+                    <td>18%</td>
+                    <td>2,700</td>
+                    <td class="skycolor">17,700.00</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>SOFTWARE SAINATH ENTERPRISE +4 IDS NEW</td>
+                    <td>998319</td>
+                    <td>1 UNIT</td>
+                    <td>1</td>
+                    <td>15,000.00</td>
+                    <td class="skycolor">15,000.00</td>
+                    <td>18%</td>
+                    <td>2,700</td>
+                    <td class="skycolor">17,700.00</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>SOFTWARE SAINATH ENTERPRISE +4 IDS NEW</td>
+                    <td>998319</td>
+                    <td>1 UNIT</td>
+                    <td>1</td>
+                    <td>15,000.00</td>
+                    <td class="skycolor">15,000.00</td>
+                    <td>18%</td>
+                    <td>2,700</td>
+                    <td class="skycolor">17,700.00</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>SOFTWARE SAINATH ENTERPRISE +4 IDS NEW</td>
+                    <td>998319</td>
+                    <td>1 UNIT</td>
+                    <td>1</td>
+                    <td>15,000.00</td>
+                    <td class="skycolor">15,000.00</td>
+                    <td>18%</td>
+                    <td>2,700</td>
+                    <td class="skycolor">17,700.00</td>
+                </tr>
+
+            </tbody>
+            <tfoot>
+                <tr class="skycolor">
+                    <td colspan="3">Total</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td></td>
+                    <td class="skycolor">15,000.00</td>
+                    <td></td>
+                    <td>2,700.00</td>
+                    <td class="skycolor">17,700.00</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <!-- section4 -->
+    <section class="sec4">
+        <div style="font-size: 15px;">
+            <h3>Our Bank Details:</h3>
+            <p><strong>Bank:</strong> IDFC FIRST BANK - RAJKOT</p>
+            <p><strong>AC Holder:</strong> PRISHA SOFTWARE PRIVATE LIMITED</p>
+            <p><strong>AC No.:</strong> 10130168664</p>
+            <p><strong>IFSC Code:</strong> IDFB0002421</p>
+        </div>
+
+        <div>
+            <img src="qr.png" alt="qr code" width="150px">
+        </div>
+
+        <table
+            style="border: 1.5px solid rgb(2, 110, 199); border-collapse: collapse;  font-size: 10px; height: 150px;width: 250px;">
+            <tr class="skycolor">
+                <th style="padding-right: 50px; text-align: start;">Taxable Amount:</th>
+                <td style="text-align: end; ">₹15,000.00</td>
+            </tr>
+            <tr>
+                <th style="padding-right: 50px; text-align: start;">S.G.S.T.:</th>
+                <td style="text-align: end; ">₹1,350.00</td>
+            </tr>
+            <tr>
+                <th style="padding-right: 50px; text-align: start;">C.G.S.T.:</th>
+                <td style="text-align: end; ">₹1,350.00</td>
+            </tr>
+            <tr class="skycolor">
+                <th style="padding-right: 50px; text-align: start;">Total Tax:</th>
+                <td style="text-align: end; ">₹2,700.00</td>
+            </tr>
+            <tr class="skycolor">
+                <th style="padding-right: 50px; text-align: start;">Round Off Amount</th>
+                <td style="text-align: end; ">0</td>
+            </tr>
+            <tr class="skycolor">
+                <th style="padding-right: 50px; text-align: start;">Total Amount After Tax:</th>
+                <td style="text-align: end; ">₹17,700.00</td>
+            </tr>
+        </table>
+    </section>
+    <hr>
+
+    <p><strong>Note:</strong>
+        <hr> Invoice Value In Words: Seventeen Thousand Seven Hundred Rupees
+    </p>
+    <hr>
+    <div class="title">
+        <strong>Terms & Conditions:</strong>
+        <strong>E.& O.E.</strong>
+        <strong>For,PRISHA SOFTWARE PRIVATE LIMITED</strong>
+    </div>
+
+    <section class="sec5">
+        <div>
+            <ul>
+                <li>Goods Once Sold Will Not Be Taken Back.</li>
+                <li>Our responsibility ceases as soon as material leaves our premises.</li>
+                <li>Payment condition 15 to 45 days to generate bills.</li>
+                <li>Interest @24% per annum will be charged on overdue amount.</li>
+            </ul>
+        </div>
+        <div>
+            <img src="stamp.png" alt="">
+        </div>
+    </section>
+
+    <hr>
+    <p style="text-align: end; padding-right: 15px;">authorized signatory</p>
+    <hr>
+    <p style="text-align: center;">certified that the particulars given above are true and correct</p>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

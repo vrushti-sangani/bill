@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+hr{
+    color: rgb(2, 110, 199);
+}
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+.content{
+    size: A4;
+    padding: 10px;
+}
+.border {
+    background-color: white;
+    width: 20cm;
+    margin-left: 0.5cm;
+    margin-top: 0.5cm;
+    margin-bottom: 0.5cm;
+    border-color: rgb(2, 110, 199);
+    border-width: 1.5px;
+    border-style: solid;
+}
+
+.bold{
+    font-weight: bold;
+}
+.sec1{
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.phone{
+    display: flex;
+    gap: 10px;
+}
+.sec2{
+    margin-top: 20px;
+}
+.gst{
+    display: flex;
+    justify-content: space-around;
+    gap: 78px;
+    font-size: 17px;
+    padding: 7px;
+}
+.customer{
+    display: flex;
+    margin-top: 5px;
+}
+.detail1{
+    width: 55%;
+}
+.detail2{
+    padding-left: 10px;
+    margin-top: 10px;
+}
+.info{
+    display: flex;
+}
+.info div{
+    text-align: left;
+}
+
+/* section3 */
+.table-con {
+    width: 100%;
+    height: 365px; /* Fixed height for the table container */
+    overflow: hidden; 
+    /* border: 1px solid rgb(2, 110, 199); */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+/* General Table Styling */
+.invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+}
+
+.invoice-table th,
+.invoice-table td {
+    border: 1.5px solid rgb(2, 110, 199);
+    padding: 7px;
+    text-align: center;
+    word-wrap: break-word; /* Prevents overflow text */
+}
+
+    /* .invoice-table tfoot {
+        flex: 0 0 auto; 
+        position: sticky;
+        bottom: 0;
+        background-color: rgb(231, 238, 251);
+        z-index: 2;
+    } */
+     
+
+.skycolor {
+    background-color: rgb(231, 238, 251);
+}
+
+
+/* section4 css give html file */
+.sec4{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* footer */
+.title{
+    display: flex;
+    font-size: 15px;
+    justify-content: center;
+    gap: 115px;
+    align-items: center;
+}
+
+/* section5 */
+.sec5{
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sec5 img{
+    width: 150px;
+}
